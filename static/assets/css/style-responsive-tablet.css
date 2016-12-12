@@ -1,0 +1,38 @@
+@media screen and (min-width: 741px) and (max-width: 960px) {
+    .container {
+        width: 85%;
+        margin: auto;
+    }
+    .header.container {
+        width: 90%;
+    }
+    .navbar-logo {
+        float: left;
+        background-image: url("/static/assets/img/logo-mobile.png");
+        background-repeat: no-repeat;
+        height: 90px;
+        width: 90px;
+    }
+    .navbar.unstick {
+        margin: auto;
+        text-align: center;
+    }
+    .navbar.unstick .navbar-logo {
+        text-align: center;
+        margin: 14px auto 0;
+        height: 67px;
+        width: 67px;
+    }
+    .portfolio-item-left {
+        padding: 15px 5px;
+        width: 50%;
+    }
+    .portfolio-item-right {
+        padding: 5px 15px;
+        width: 50%;
+        margin-left: 50%;
+    }
+    .portfolio-item-description {
+        padding: 5px 0;
+    }
+}
