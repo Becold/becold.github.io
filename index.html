@@ -176,13 +176,13 @@
 		<h2 class="section-title"><span>Me contacter</span></h2>
 		<div class="section-content">
 			<p>Interessé par mon profil pour travailler sur un projet? </p>
-			<form action="" method="post" id="contact-form" class="contact-form">
+			<form action="https://formspree.io/contact@romainmarbaix.be" method="post" id="contact-form" class="contact-form">
 				<div class="form-group">
 					<div class="form-group-label">
 						<label for="contact-name" class="form-label">Votre nom :</label>
 					</div>
 					<div class="form-group-input">
-						<input type="text" id="contact-name" name="contact-name" class="form-input" placeholder="Nom" required />
+						<input type="text" id="contact-name" name="name" class="form-input" placeholder="Nom" required />
 					</div>
 				</div>
 				<div class="form-group">
@@ -190,7 +190,7 @@
 						<label for="contact-email" class="form-label">Votre adresse email :</label>
 					</div>
 					<div class="form-group-input">
-						<input type="email" id="contact-email" name="contact-email" class="form-input" placeholder="Adresse email" required />
+						<input type="email" id="contact-email" name="_email" class="form-input" placeholder="Adresse email" required />
 					</div>
 				</div>
 				<div class="form-group">
@@ -198,13 +198,20 @@
 						<label for="contact-subject" class="form-label">Sujet :</label>
 					</div>
 					<div class="form-group-input">
-						<input type="text" id="contact-subject" name="contact-subject" class="form-input" placeholder="Sujet" required />
+						<input type="text" id="contact-subject" name="_subject" class="form-input" placeholder="Sujet" required />
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="contact-message" class="form-label">Message :</label>
 					<textarea id="contact-message" name="contact-message" class="form-textarea" placeholder="Message" required></textarea>
 				</div>
+
+				<!-- Hidden div for formspree.io -->
+				<div style="display: none;">
+					<input type="hidden" name="_next" value="https://www.romainmarbaix.be" />
+					<input type="text" name="_gotcha" style="display:none" />
+				</div>
+
 				<div class="form-group">
 					<button class="form-button">Envoyer</button>
 				</div>

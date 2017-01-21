@@ -15,25 +15,6 @@ if(navigator.userAgent.match(/MSIE 10/i)
     });
 }
 
-/*
- * Contact form
- */
-$( "#contact-form" ).submit(function(e){
-    e.preventDefault();
-
-    $.post(API_URL + "contact/send", $("#contact-form").serialize(), function (resp) {
-        resp = JSON.parse(resp);
-
-        if(resp.success) {
-            console.log('ok');
-        }
-        else {
-            console.log('notok');
-        }
-
-    });
-
-});
 
 var onLoad = function() {
     /*
