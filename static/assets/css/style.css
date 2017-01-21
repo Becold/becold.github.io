@@ -75,7 +75,7 @@ a:hover { color: #3da5b1; }
 }
 .navbar-logo {
     float: left;
-    background-image: url("/static/assets/img/logo.png");
+    background-image: url("../img/logo.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 90px;
@@ -134,7 +134,7 @@ a:hover { color: #3da5b1; }
 }
 .header::after {
     content: "";
-    background: linear-gradient(rgba(122, 127, 131, 0.35),rgba(122, 127, 131, 0.35)), url("/static/assets/img/parallax/header.jpg") no-repeat fixed;
+    background: linear-gradient(rgba(122, 127, 131, 0.35),rgba(122, 127, 131, 0.35)), url("../img/parallax/header.jpg") no-repeat fixed;
     background-position: right center;
     background-size: cover;
     opacity: 0.75;

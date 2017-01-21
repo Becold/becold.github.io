@@ -8,7 +8,7 @@
     }
     .navbar-logo {
         float: left;
-        background-image: url("/static/assets/img/logo-mobile.png");
+        background-image: url("../img/logo-mobile.png");
         background-repeat: no-repeat;
         height: 90px;
         width: 90px;
