@@ -369,6 +369,7 @@ a:hover { color: #3da5b1; }
     margin: auto;
 }
 .footer-right-links {
+    text-decoration: none;
     height: 32px;
     width: 32px;
 }
