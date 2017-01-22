@@ -299,7 +299,6 @@ a:hover { color: #3da5b1; }
 .portfolio-item-link {
     color: #0e0e0e;
     font-weight: lighter;
-    text-decoration: none;
     text-align: right;
     font-style: italic;
 }
