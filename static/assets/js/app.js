@@ -1,4 +1,15 @@
-var API_URL = "http://api.romainmarbaix.dev/";
+/*
+ * Helpers
+ */
+function setHash(value)
+{
+    if(history.pushState) {
+        history.pushState(null, null, value);
+    }
+    else {
+        location.hash = value;
+    }
+}
 
 /*
  * Damn ie!
@@ -15,36 +26,65 @@ if(navigator.userAgent.match(/MSIE 10/i)
     });
 }
 
+/*
+ * App
+ */
 
-var onLoad = function() {
-    /*
-     * Hide the loader
-     */
-    $('.loader').delay(200).fadeTo("slow", 0, function() {
-        $('.loader').hide();
-    });
+// Hide the loader on load
+$( window ).load(function() {
+    $('.loader').delay(100).fadeOut();
+});
 
-    /*
-     * Navbar is sticked to the top of the page when scrolling
-     */
-    $(window).scroll(function () {
 
-        var navbar = $('.navbar');
+// Correct the scrolltop on load with anchor
+$(window).on('load hashchange', function(event) {
 
-        // Si le scroll est tout en haut de la page
-        if ($(window).scrollTop() > 35) {
-            if(! navbar.hasClass('unstick')) {
-                navbar.addClass('unstick');
-            }
+    var target = $(location.hash);
+
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: target.offset().top - $('nav').height()
+        }, 300);
+    }
+
+});
+
+
+// Scroll animation
+$('a[href^="#"]').on('click', function(event) {
+
+    var hash = $(this).attr('href');
+    var target = $(hash);
+
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: target.offset().top - $('nav').height()
+        }, 300);
+        setHash(hash);
+    }
+
+});
+
+
+// On scroll
+$(window).scroll(function () {
+    // Parallax
+    $('.header').css({'background-position': '50% ' + $(window).scrollTop() * -.2 + 'px'});
+    $('.section#portfolio').css({'background-position': '50% ' + $(window).scrollTop() * -.2 + 'px'});
+
+    // Sticky navbar
+    var navbar = $('.navbar');
+
+    if ($(window).scrollTop() > 35) {
+        if(! navbar.hasClass('unstick')) {
+            navbar.addClass('unstick');
         }
-        // Si le scroll a dépassé le haut de la page
-        else {
-            if(navbar.hasClass('unstick')) {
-                navbar.removeClass('unstick');
-            }
+    }
+    else {
+        if(navbar.hasClass('unstick')) {
+            navbar.removeClass('unstick');
         }
-
-    });
-}();
-
-$( window ).load(onLoad);
+    }
+});

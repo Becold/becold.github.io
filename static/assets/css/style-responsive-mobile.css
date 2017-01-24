@@ -28,13 +28,19 @@
         font-size: 34px;
     }
 
-    .portfolio-item-left {
+    .portfolio-list {
+        flex-direction: column;
+    }
+    .portfolio-item {
+        width: 100%;
+    }
+    .portfolio-item-top {
         float: none;
         padding: 0;
         display: block;
         width: 100%;
     }
-    .portfolio-item-right {
+    .portfolio-item-bottom {
         margin: 0;
         display: block;
         padding: 5px 15px;

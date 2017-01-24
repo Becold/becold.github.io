@@ -23,16 +23,7 @@
         height: 67px;
         width: 67px;
     }
-    .portfolio-item-left {
-        padding: 15px 5px;
-        width: 50%;
-    }
-    .portfolio-item-right {
-        padding: 5px 15px;
-        width: 50%;
-        margin-left: 50%;
-    }
-    .portfolio-item-description {
-        padding: 5px 0;
+    .portfolio-list {
+        justify-content: space-around;
     }
 }
