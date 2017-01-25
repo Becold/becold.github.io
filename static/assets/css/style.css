@@ -99,9 +99,11 @@ a:hover { color: #3da5b1; }
     text-transform: uppercase;
     font-weight: bold;
     border-color: transparent;
+    transition: all .2s ease-in;
 }
 .navbar-list-item:hover {
     color: #1b525e;
+    transition: color .2s ease-in;
 }
 
 
@@ -112,8 +114,6 @@ a:hover { color: #3da5b1; }
 }
 .navbar.unstick .navbar-list-item:hover {
     transition: color 0.2s ease, border-color 0.2s ease;
-}
-.navbar.unstick .navbar-list-item:hover {
     color: #3fb1ca;
     margin-top: -2px;
     border-top: 2px solid #3fb1ca;
@@ -165,13 +165,17 @@ a:hover { color: #3da5b1; }
     text-decoration: none;
 }
 .header-links-cv:hover {
-    -webkit-box-shadow: 0 0 26px 1px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0 0 26px 1px rgba(0, 0, 0, 0.75);
-    box-shadow: 0 0 26px 1px rgba(0, 0, 0, 0.75);
-    color: #ffffff;
+    -webkit-box-shadow: 3px 4px 12px 0px rgba(0, 0, 0, 0.33);
+    -moz-box-shadow: 3px 4px 12px 0px rgba(0, 0, 0, 0.33);
+    box-shadow: 3px 4px 12px 0px rgba(0, 0, 0, 0.33);
+    color: #fff;
+}
+.header-links-cv:active {
+    background-color: #3da5b1;
+    transition:none;
 }
 .section {
-    padding-top: 62px;
+    padding: 62px 0;
 }
 .section-title {
     padding: 10px 0;
@@ -397,7 +401,7 @@ a:hover { color: #3da5b1; }
 
 
     .section#portfolio {
-        background-image: url("../img/parallax/portfolio-mobile.jpg");
+        background-image: url("../img/parallax/portfolio-mobile.jpg") !important;
     }
 
     .footer {
