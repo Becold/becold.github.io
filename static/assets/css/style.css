@@ -237,6 +237,7 @@ a:hover { color: #3da5b1; }
     padding-bottom: 75px;
 }
 .portfolio-list {
+    height: 100%;
     display: flex;
     justify-content: space-between;
     flex-flow: row wrap;
@@ -245,7 +246,6 @@ a:hover { color: #3da5b1; }
 }
 .portfolio-item {
     overflow: hidden;
-    display: flex;
     float: left;
     margin-bottom: 30px;
     width: 30%;

@@ -29,10 +29,10 @@ if(navigator.userAgent.match(/MSIE 10/i)
 /*
  * App
  */
-
 // Hide the loader on load
 $( window ).load(function() {
     $('.loader').delay(100).fadeOut();
+    onScroll();
 });
 
 
@@ -69,10 +69,12 @@ $('a[href^="#"]').on('click', function(event) {
 
 
 // On scroll
-$(window).scroll(function () {
+$(window).scroll(onScroll);
+
+function onScroll() {
     // Parallax
-    $('.header').css({'background-position': '50% ' + $(window).scrollTop() * -.2 + 'px'});
-    $('.section#portfolio').css({'background-position': '50% ' + $(window).scrollTop() * -.2 + 'px'});
+    $('.header').css({'background-position': '50% ' + ( $(window).scrollTop() - $('.header').offset().top ) * -.3 + 'px'});
+    $('.section#portfolio').css({'background-position': '30% ' + ( $(window).scrollTop() - $('.section#portfolio').offset().top ) * -.1 + 'px'});
 
     // Sticky navbar
     var navbar = $('.navbar');
@@ -87,4 +89,4 @@ $(window).scroll(function () {
             navbar.removeClass('unstick');
         }
     }
-});
+};
