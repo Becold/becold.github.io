@@ -2,7 +2,14 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+span, p, h1, h2, h3, a, div {
     font-family: "Open sans", Arial, sans-serif;
+}
+
+p {
+    font-size: 16px;
 }
 
 body, html {
@@ -140,7 +147,6 @@ a:hover { color: #3da5b1; }
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
 
     opacity: 1;
 }
@@ -205,7 +211,7 @@ a:hover { color: #3da5b1; }
     margin-left: 15px;
 }
 .section-content {
-    padding: 35px 0;
+    padding-top: 35px;
     text-align: center;
 }
 .skills-row {
@@ -265,6 +271,7 @@ a:hover { color: #3da5b1; }
     height: auto;
 }
 .portfolio-item-bottom {
+    height: 170px;
     text-align: left;
     background-color: #fff;
     padding: 15px 10px 25px 25px;
@@ -296,6 +303,39 @@ a:hover { color: #3da5b1; }
     font-style: italic;
 }
 
+.contact-email {
+    margin: 50px 0;
+}
+.contact-email .icon {
+    margin-right: 17px;
+    font-size: 28px;
+    color: #333;
+}
+.contact-email .span {
+    font-size: 28px;
+    font-weight: lighter;
+    text-decoration: none;
+    letter-spacing: -1.5px;
+}
+
+.separator {
+    margin: auto;
+    width: 165px;
+}
+
+.contact-socials {
+    margin-top: 50px;
+}
+.contact-social {
+    text-decoration: none;
+    font-size: 26px;
+    margin: 0 10px;
+}
+
+.social.fa-linkedin { color: #1a85bc; }
+.social.fa-github-alt { color: #000000; }
+
+/*
 .contact-form {
     margin: auto;
     text-align: left;
@@ -345,50 +385,24 @@ a:hover { color: #3da5b1; }
 .form-button:active {
     background-color: #42b7d1;
 }
+*/
 
 
 .footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
     height: 64px;
     background-color: rgba(7, 39, 43, 1);
     color: #ffffff;
 }
-.footer-col {
-    display: inline-block;
-    margin: auto;
-}
-.footer-right-links {
-    text-decoration: none;
-    height: 32px;
-    width: 32px;
-}
-.footer-col.left img {
-    height: 32px;
-    width: 32px;
-
-    -webkit-filter: invert(0%);
-    -moz-filter: invert(0%);
-    -o-filter: invert(0);
-    filter: invert(0%);
-    transition: -webkit-filter .3s linear;
-    transition: filter .3s linear;
-}
-.footer-right-links:hover img {
-    -webkit-filter: invert(40%);
-    -moz-filter: invert(40%);
-    -o-filter: invert(40);
-    filter: invert(40%);
-}
-
-.footer-col.right {
-    float: right;
-    text-align: right;
-    line-height: 37px;
-}
 
 @media screen and (max-width: 890px) {
+    .header {
+        background-size: 150% 150%;
+    }
+
     .section-title {
         margin: 50px 0 10px;
         font-size: 46px;
