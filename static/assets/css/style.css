@@ -135,7 +135,6 @@ a:hover { color: #3da5b1; }
 
     display: flex;
     align-items: center;
-    justify-content: center;
 
     background-image: linear-gradient(rgba(122, 127, 131, 0.40),rgba(122, 127, 131, 0.40)), url("../img/parallax/header.jpg");
     background-position: center center;
@@ -308,6 +307,7 @@ a:hover { color: #3da5b1; }
     display: inline-block;
 }
 .form-group-input {
+    line-height: 100%;
     width: 100%;
 }
 .form-input {
@@ -392,6 +392,11 @@ a:hover { color: #3da5b1; }
     .section-title span::before,
     .section-title span::after {
         display: none;
+    }
+
+
+    .section#portfolio {
+        background-image: url("../img/parallax/portfolio-mobile.jpg");
     }
 
     .footer {
