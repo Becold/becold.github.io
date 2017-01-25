@@ -331,7 +331,7 @@ a:hover { color: #3da5b1; }
     height: 250px;
     font-size: 17px;
     border-radius: 3px;
-    padding: 5px;
+    padding: 5px 15px;
 }
 .form-button {
     margin: auto;
