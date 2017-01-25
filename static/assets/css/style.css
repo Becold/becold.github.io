@@ -307,16 +307,16 @@ a:hover { color: #3da5b1; }
     display: inline-block;
 }
 .form-group-input {
-    line-height: 100%;
+    margin: 2px 0;
     width: 100%;
 }
 .form-input {
     width: 100%;
     border: 1px solid #2c8396;
     color: #2c8396;
-    line-height: 32px;
+    line-height: 100%;
     font-size: 17px;
-    padding: 0 15px;
+    padding: 5px 15px;
 }
 .form-textarea {
     resize: vertical;
@@ -346,6 +346,7 @@ a:hover { color: #3da5b1; }
 .footer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 64px;
     background-color: rgba(7, 39, 43, 1);
     color: #ffffff;
