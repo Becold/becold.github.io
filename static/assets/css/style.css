@@ -335,59 +335,6 @@ a:hover { color: #3da5b1; }
 .social.fa-linkedin { color: #1a85bc; }
 .social.fa-github-alt { color: #000000; }
 
-/*
-.contact-form {
-    margin: auto;
-    text-align: left;
-    width: 75%;
-}
-.form-group {
-    display: table;
-    margin: 15px 0;
-    width: 100%;
-}
-.form-group-label,
-.form-group-input {
-    display: inline-block;
-}
-.form-group-input {
-    margin: 2px 0;
-    width: 100%;
-}
-.form-input {
-    width: 100%;
-    border: 1px solid #2c8396;
-    color: #2c8396;
-    line-height: 100%;
-    font-size: 17px;
-    padding: 5px 15px;
-}
-.form-textarea {
-    resize: vertical;
-    display: block;
-    width: 100%;
-    border: 1px solid #2c8396;
-    color: #2c8396;
-    height: 250px;
-    font-size: 17px;
-    border-radius: 3px;
-    padding: 5px 15px;
-}
-.form-button {
-    margin: auto;
-    outline: none;
-    border: none;
-    background-color: #2c8396;
-    color: #ffffff;
-    padding: 10px 50px;
-    border-radius: 0;
-}
-.form-button:active {
-    background-color: #42b7d1;
-}
-*/
-
-
 .footer {
     display: flex;
     justify-content: space-between;
