@@ -32,8 +32,12 @@ a:hover { color: #3da5b1; }
 
     display: -webkit-flex; /* Safari */
     -webkit-align-items: center; /* Safari 7.0+ */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .loader-container {
     margin: auto;
@@ -54,16 +58,24 @@ a:hover { color: #3da5b1; }
 }
 
 .loader-icon2 {
-    animation-delay: -0.35s;
+    -webkit-animation-delay: -0.35s;
+            animation-delay: -0.35s;
 }
 .loader-icon3 {
-    animation-delay: -0.70s;
+    -webkit-animation-delay: -0.70s;
+            animation-delay: -0.70s;
+}
+
+@-webkit-keyframes loaderAnimation {
+    0% { -webkit-transform: scale(0); transform: scale(0); }
+    50% { -webkit-transform: scale(1); transform: scale(1); }
+    100% { -webkit-transform: scale(0); transform: scale(0); }
 }
 
 @keyframes loaderAnimation {
-    0% { transform: scale(0); }
-    50% { transform: scale(1); }
-    100% { transform: scale(0); }
+    0% { -webkit-transform: scale(0); transform: scale(0); }
+    50% { -webkit-transform: scale(1); transform: scale(1); }
+    100% { -webkit-transform: scale(0); transform: scale(0); }
 }
 
 .container {
@@ -82,6 +94,7 @@ a:hover { color: #3da5b1; }
     height: 110px;
     padding: 20px 0;
     z-index: 1000000000;
+    -webkit-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
 }
 .navbar-logo {
@@ -106,10 +119,12 @@ a:hover { color: #3da5b1; }
     text-transform: uppercase;
     font-weight: bold;
     border-color: transparent;
+    -webkit-transition: all .2s ease-in;
     transition: all .2s ease-in;
 }
 .navbar-list-item:hover {
     color: #1b525e;
+    -webkit-transition: color .2s ease-in;
     transition: color .2s ease-in;
 }
 
@@ -120,6 +135,7 @@ a:hover { color: #3da5b1; }
     height: 100px;
 }
 .navbar.unstick .navbar-list-item:hover {
+    -webkit-transition: color 0.2s ease, border-color 0.2s ease;
     transition: color 0.2s ease, border-color 0.2s ease;
     color: #3fb1ca;
     margin-top: -2px;
@@ -140,8 +156,14 @@ a:hover { color: #3da5b1; }
     color: #ffffff;
     overflow: hidden;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 
     background-image: url("../img/parallax/header.jpg");
     background-position: center center;
@@ -149,6 +171,8 @@ a:hover { color: #3da5b1; }
     background-size: cover;
 
     opacity: 1;
+
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
 
 .header.container {
@@ -171,13 +195,12 @@ a:hover { color: #3da5b1; }
     text-decoration: none;
 }
 .header-links-cv:hover {
-    -webkit-box-shadow: 3px 4px 12px 0px rgba(0, 0, 0, 0.33);
-    -moz-box-shadow: 3px 4px 12px 0px rgba(0, 0, 0, 0.33);
-    box-shadow: 3px 4px 12px 0px rgba(0, 0, 0, 0.33);
+    box-shadow: 3px 4px 12px 0 rgba(0, 0, 0, 0.33);
     color: #fff;
 }
 .header-links-cv:active {
     background-color: #3da5b1;
+    -webkit-transition: none;
     transition:none;
 }
 .section {
@@ -193,8 +216,8 @@ a:hover { color: #3da5b1; }
     display: inline-block;
     position: relative;
 }
-.section-title span::before,
-.section-title span::after {
+.section-title span:before,
+.section-title span:after {
     content: "";
     position: absolute;
     height: 1px;
@@ -202,11 +225,11 @@ a:hover { color: #3da5b1; }
     top: 15px;
     width: 250px;
 }
-.section-title span::before {
+.section-title span:before {
     right: 100%;
     margin-right: 15px;
 }
-.section-title span::after {
+.section-title span:after {
     left: 100%;
     margin-left: 15px;
 }
@@ -216,11 +239,16 @@ a:hover { color: #3da5b1; }
 }
 .skills-row {
     margin-bottom: 45px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
-.skills-row:last-child { margin-bottom: 0px; }
+.skills-row:last-child { margin-bottom: 0; }
 .skills-item {
     padding: 0 25px;
     display: inline-block;
@@ -238,8 +266,8 @@ a:hover { color: #3da5b1; }
 .section#portfolio .section-title {
     color: #fff;
 }
-.section#portfolio .section-title span::before,
-.section#portfolio .section-title span::after {
+.section#portfolio .section-title span:before,
+.section#portfolio .section-title span:after {
     border-color: #fff;
 }
 .section#portfolio .container {
@@ -247,11 +275,19 @@ a:hover { color: #3da5b1; }
 }
 .portfolio-list {
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    flex-flow: row wrap;
-    align-items: stretch;
-    align-content: space-around;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -ms-flex-line-pack: distribute;
+        align-content: space-around;
 }
 .portfolio-item {
     overflow: hidden;
@@ -336,13 +372,25 @@ a:hover { color: #3da5b1; }
 .social.fa-github-alt { color: #000000; }
 
 .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: center;
     height: 64px;
     background-color: rgba(7, 39, 43, 1);
     color: #ffffff;
+}
+.footer .fa-heart {
+    color: #be1931;
+}
+.footer .fa-coffee {
+    color: #8a4b38;
 }
 
 @media screen and (max-width: 890px) {
@@ -354,8 +402,8 @@ a:hover { color: #3da5b1; }
         font-size: 36px;
         text-decoration: underline !important;
     }
-    .section-title span::before,
-    .section-title span::after {
+    .section-title span:before,
+    .section-title span:after {
         display: none;
     }
 
