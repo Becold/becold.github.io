@@ -143,10 +143,10 @@ a:hover { color: #3da5b1; }
     display: flex;
     align-items: center;
 
-    background-image: linear-gradient(rgba(122, 127, 131, 0.40),rgba(122, 127, 131, 0.40)), url("../img/parallax/header.jpg");
+    background-image: url("../img/parallax/header.jpg");
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-size: cover;
 
     opacity: 1;
 }
@@ -233,7 +233,6 @@ a:hover { color: #3da5b1; }
     background-image: url("../img/parallax/portfolio.jpg");
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 .section#portfolio .section-title {
     color: #fff;
