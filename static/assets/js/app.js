@@ -73,7 +73,7 @@ $(window).scroll(onScroll);
 
 function onScroll() {
     // Parallax
-    $('.header').css({'background-position': '50% ' + ( $(window).scrollTop() - $('.header').offset().top ) * -.4 + 'px'});
+    $('.header').css({'background-position': '50% ' + -( $(window).scrollTop() - $('.header').offset().top ) * -.4 + 'px'});
     $('.section#portfolio').css({'background-position': '0px ' + -( $(window).scrollTop() - $('.section#portfolio').offset().top ) * -.6 + 'px'});
 
     // Sticky navbar

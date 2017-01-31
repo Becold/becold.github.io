@@ -230,6 +230,7 @@ a:hover { color: #3da5b1; }
     text-align: center;
 }
 .section#portfolio {
+    background-color: #a1a1a5;
     background-image: url("../img/parallax/portfolio.jpg");
     background-position: center center;
     background-repeat: no-repeat;
@@ -345,13 +346,12 @@ a:hover { color: #3da5b1; }
 }
 
 @media screen and (max-width: 890px) {
-    .header {
-        background-size: 150% 150%;
+    .section {
+        padding: 32px 0;
     }
-
     .section-title {
-        margin: 50px 0 10px;
-        font-size: 46px;
+        margin: 25px 0 10px;
+        font-size: 36px;
         text-decoration: underline !important;
     }
     .section-title span::before,
@@ -361,12 +361,13 @@ a:hover { color: #3da5b1; }
 
 
     .section#portfolio {
-        background-image: url("../img/parallax/portfolio-mobile.jpg") !important;
+        background-image: none;
     }
 
-    .footer {
-        height: 150px;
+    .contact-email .span {
+        font-size: 18px;
     }
+
     .footer-col{
         display: block;
         margin: 5px;
