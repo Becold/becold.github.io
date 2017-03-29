@@ -31,7 +31,7 @@ if(navigator.userAgent.match(/MSIE 10/i)
  */
 // Hide the loader on load
 $( window ).load(function() {
-    $('.loader').delay(100).fadeOut();
+    $('.loader').fadeOut();
     onScroll();
 });
 

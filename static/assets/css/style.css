@@ -42,19 +42,17 @@ a:hover { color: #3da5b1; }
 .loader-container {
     margin: auto;
 }
-
 .loader-icon1,
 .loader-icon2,
 .loader-icon3 {
     display: inline-block;
-    margin: 0 7px;
-    width: 18px;
-    height: 18px;
+    margin: 0 3px;
+    width: 25px;
+    height: 25px;
     background-color: #fff;
     border-radius: 100%;
 
-    -webkit-animation: loaderAnimation 1.4s infinite ease-in-out both;
-    animation: loaderAnimation 1.4s infinite ease-in-out both;
+    animation: loaderAnimation 1.45s infinite ease-in-out both;
 }
 
 .loader-icon2 {
@@ -67,15 +65,15 @@ a:hover { color: #3da5b1; }
 }
 
 @-webkit-keyframes loaderAnimation {
-    0% { -webkit-transform: scale(0); transform: scale(0); }
-    50% { -webkit-transform: scale(1); transform: scale(1); }
-    100% { -webkit-transform: scale(0); transform: scale(0); }
+    0% { -webkit-transform: scale(0) scale(0); }
+    50% { -webkit-transform: scale(1) scale(1); }
+    100% { -webkit-transform: scale(0) scale(0); }
 }
 
 @keyframes loaderAnimation {
-    0% { -webkit-transform: scale(0); transform: scale(0); }
-    50% { -webkit-transform: scale(1); transform: scale(1); }
-    100% { -webkit-transform: scale(0); transform: scale(0); }
+    0% { -webkit-transform: scale(0) scale(0); }
+    50% { -webkit-transform: scale(1) scale(1); }
+    100% { -webkit-transform: scale(0) scale(0); }
 }
 
 .container {
@@ -235,7 +233,6 @@ a:hover { color: #3da5b1; }
 }
 .section-content {
     padding-top: 35px;
-    text-align: center;
 }
 .skills-row {
     margin-bottom: 45px;
@@ -274,45 +271,27 @@ a:hover { color: #3da5b1; }
     padding-bottom: 75px;
 }
 .portfolio-list {
-    height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -ms-flex-flow: row wrap;
-        flex-flow: row wrap;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
-    -ms-flex-line-pack: distribute;
-        align-content: space-around;
+    flex-flow: row wrap;
+    align-items: stretch;
+    align-content: space-around;
 }
 .portfolio-item {
-    overflow: hidden;
-    float: left;
-    margin-bottom: 30px;
+    background-color: #fff;
     width: 30%;
-    min-width: 300px;
+    margin: 0 15px 30px;
 }
-.portfolio-item-inner {
-    width: 100%;
-    margin: 0;
-}
-.portfolio-item-top {
+.portfolio-item-image {
     display: block;
     max-width: 100%;
     margin: auto;
     height: auto;
 }
 .portfolio-item-bottom {
-    height: 170px;
     text-align: left;
     background-color: #fff;
     padding: 15px 10px 25px 25px;
 }
-
 .portfolio-item-title {
     color: #333;
     font-weight: bold;
@@ -333,12 +312,10 @@ a:hover { color: #3da5b1; }
     color: #555;
     font-size: 13px;
 }
-.portfolio-item-link {
-    font-weight: lighter;
-    text-align: right;
-    font-style: italic;
-}
 
+#contact {
+    text-align: center;
+}
 .contact-email {
     margin: 50px 0;
 }
