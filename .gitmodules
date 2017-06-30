@@ -1,0 +1,3 @@
+[submodule "demos/tetris-html5"]
+	path = demos/tetris-html5
+	url = https://github.com/becold/tetris-html5
