@@ -8,6 +8,8 @@
 	<meta name="robots" content="noindex, nofollow">
 </head>
 <body>
+	<div id="overlay_dark"></div>
+
 	<nav id="navbar" class="navbar">
 		<a class="navbar__item" href="#section-home">Accueil</a>
 		<a class="navbar__item" href="#section-a_propos">A propos</a>
@@ -44,7 +46,7 @@
 					Goutez à nos succulentes salades décorées de nos ingrédients les plus frais. Nous les choisissons nous mêmes directement depuis nos fournisseurs de la région.
 				</p>
 				<div class="center">
-					<button class="btn-outline btn-green">Notre menu</button>
+					<button id="menu_button" class="btn-outline btn-green">Notre menu</button>
 				</div>
 			</div>
 
@@ -82,8 +84,69 @@
 		</section>
 	</article>
 
+	<div id="menu_products">
+		<div id="menu_products_close"></div>
+		<div id="menu_products_content">
+			<h2 class="title">Menu</h2>
+
+			<h3 class="sub_title">Salades</h3>
+			<ul>
+				<li>
+					<span>Salade composée (petit)</span>
+					<span>2.00 €</span>
+				</li>
+				<li>
+					<span>Salade composée (moyen)</span>
+					<span>2.50 €</span>
+				</li>
+				<li>
+					<span>Salade composée (grand)</span>
+					<span>3.50 €</span>
+				</li>
+				<li>
+					<span>Salade composée (XL)</span>
+					<span>4.50 €</span>
+				</li>
+			</ul>
+
+			<h3 class="sub_title">Boissons</h3>
+			<ul>
+				<li>
+					<span>Eau</span>
+					<span>0.80 €</span>
+				</li>
+				<li>
+					<span>Coca, fanta, pepsi, ...</span>
+					<span>1.00 €</span>
+				</li>
+				<li>
+					<span>Redbull, Monster</span>
+					<span>2.00 €</span>
+				</li>
+			</ul>
+
+			<h3 class="sub_title">Desserts</h3>
+			<ul>
+				<li>
+					<span>Muffin</span>
+					<span>2.50 €</span>
+				</li>
+				<li>
+					<span>Mousse au chocolat</span>
+					<span>2.50 €</span>
+				</li>
+				<li>
+					<span>Salade de fruis frais</span>
+					<span>3.50 €</span>
+				</li>
+			</ul>
+
+		</div>
+	</div>
+
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 	<script src="js/scrollspy.js"></script>
 	<script src="js/smoothscroll.js"></script>
+	<script src="js/app.js"></script>
 </body>
 </html>

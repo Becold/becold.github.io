@@ -1,14 +1,26 @@
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 body {
     background: rgba(255, 255, 255, 0.5);
     font-family: "Open sans", Verdana, Arial, Calibri, sans-serif;
     color: #000;
+    margin: 0;
+    padding: 0;
+}
 
+#overlay_dark {
+    display: none;
+    z-index: 10;
+    position: fixed;
+    background-color: rgba(64, 64, 64, 0.7);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .btn-outline{
@@ -22,23 +34,15 @@ body {
     font-size: 20px;
     font-weight: 800;
 }
-.btn-outline:active {
-    -webkit-animation: bobble 0.3s ; /* Safari 4+ */
-    -moz-animation:    bobble 0.3s ; /* Fx 5+ */
-    -o-animation:      bobble 0.3s ; /* Opera 12+ */
-    animation:         bobble 0.3s ; /* IE 10+, Fx 29+ */
-}
-
 .btn-outline.btn-green {
     border-color: #6fb35d;
     color: #6fb35d;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 
 }
 .btn-outline.btn-green:hover {
     background-color: #6fb35d;
     color: #fff;
-
 }
 
 @keyframes bobble {
@@ -145,7 +149,7 @@ body {
 
 .content > .section-w100p.gallery > .section-960 {
     display: flex;
-    
+
     /** Responsivité **/
     height: 159px;
     flex-wrap: wrap;
@@ -257,4 +261,67 @@ body {
 .content > .section-w100p.contact > .section-960 > .row > #col-4 {
     padding-left: 15px;
     text-align: left;
+}
+
+/*
+ *                   - Button (Display menu on blick)
+ */
+
+ #menu_products {
+    display: none;
+    z-index: 11;
+    position: fixed;
+    top: 25%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 650px;
+    background-color: rgb(230, 230, 230);
+    border-radius: 11px;
+    padding: 0px 20px;
+ }
+
+ #menu_products_close {
+    position: absolute;
+    right: 13px;
+    top: 10px;
+    background-color: #444;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    cursor: pointer;
+ }
+
+ #menu_products_close:before {
+    content: 'x';
+    color: #fff;
+ }
+
+ #menu_products_close:hover {
+    background-color: #000;
+ }
+
+#menu_products_content > .title {
+    text-align: center;
+}
+
+#menu_products_content > .sub_title {
+    size: 14px;
+    font-weight: 200;
+    color: green;
+}
+
+#menu_products_content ul {
+    padding-left: 15px;
+    list-style: none;
+}
+#menu_products_content ul span:first-child:after {
+    content: leader(dotted);
+}
+#menu_products_content ul span + span {
+    float: right;
+    position: relative;
+    z-index: 1;
 }
